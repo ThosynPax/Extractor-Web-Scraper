@@ -1,0 +1,332 @@
+#fullscreen-textarea {
+            width: 1100px;
+            height: 500px;
+            padding: 20px; 
+            border: 2px solid #bebebe;
+            background-color: #fff; 
+            border-radius: 25px;
+}
+
+
+
+/* Add a class to the icon if needed */
+
+.status-number {
+    display: inline-block;
+    perspective: 1000px;
+  }
+  
+  .status-number .fas {
+    transition: transform 0.5s;
+  }
+  
+  .status-number .fas:hover {
+    transform: rotateX(30deg);
+  }
+  
+  .status-number .fas:hover a {
+    pointer-events: none; /* Disable the link while rotating */
+  }
+
+  .status-type-email {
+    font-size: 12px;
+    left: 50px;
+  }
+  
+  .item-status {
+    cursor: pointer;
+}
+
+
+.item-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+  }
+  
+  .status-number {
+    text-align: center;
+  }
+  
+  .status-type-email {
+    text-align: center;
+    margin-top: 5px; /* Adjust the margin as needed */
+  }
+
+/* Add more styles to customize your popup content */
+
+  
+.excel-like-table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+
+
+.excel-like-table th, .excel-like-table td {
+    border: 1px solid #000; /* Set the border style and color */
+    padding: 8px; /* Add padding for cell content */
+    text-align: left; /* Adjust text alignment as needed */
+
+}
+
+.excel-like-table th {
+    background-color: #f2f2f2;
+    font-weight:100;
+    font-size: 13px;
+    padding-right: 100px;
+}
+
+
+.excel-like-table tbody::before {
+    content: " ";
+    display: block;
+    height: 10px; /* Adjust the height to control the row height */
+    background-color: transparent; /* Color of the grid lines */
+    border-top: 1px solid #000; /* Border for horizontal grid lines */
+}
+
+.excel-like-table tr::before {
+    content: " ";
+    display: table-cell;
+    width: 10px; /* Adjust the width to control the column width */
+    background-color: transparent; /* Color of the grid lines */
+    border-left: 1px solid #000; /* Border for vertical grid lines */
+}
+
+/* Styling for the popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 60%;
+  height: 80%;
+  border: 2px solid #ecedea;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rectangles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.rectangle {
+  flex: 0 0 calc(33.33% - 10px);
+  height: 100px;
+  background-color: #ecedea;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5f6368;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.rectangle:hover {
+  background-color: #f2f6fc;
+}
+
+.close-button {
+  align-self: flex-end;
+}
+
+.rectangle i {
+  font-size: 24px;
+  padding: 10px;
+}
+
+.rectangle span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%; 
+  text-align: right;
+  font-size: 15px;
+  font-weight: 200;
+}
+/* Styling for the second popup */
+.popup-2 {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 50%;
+  height: 120%;
+  border: 2px solid #ecedea;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the "Cancel" button */
+.close-button-2 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #1f1c2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input, select {
+  padding: 5px;
+  border: 1px solid #1f1c2e;
+  border-radius: 5px;
+
+}
+
+/* Styling for the buttons */
+.close-button-2, .proceed-button {
+  background-color: #1f1c2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.proceed-button {
+  float: right; /* Position the Proceed button to the right */
+}
+
+/* Styling for the textarea */
+textarea {
+  padding: 5px;
+  border: 1px solid #1f1c2e;
+  border-radius: 5px;
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 100px; /* Set the minimum height */
+}
+
+
+.popup-3 {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+  width: 30%;
+  height: 30%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content-3 {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  text-align: center;
+  height: 200px;
+}
+
+.close-icon-3 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.proceed-button-3 {
+  background-color: #0074d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the new popups */
+.popup-instagram,
+.popup-facebook,
+.popup-twitter,
+.popup-linkedin {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    width: 30%;
+    height: 30%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-instagram,
+.popup-facebook,
+.popup-twitter,
+.popup-linkedin  {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  height: 200px;
+}
+
+/* Close icons for each popup */
+.close-icon-instagram,
+.close-icon-facebook,
+.close-icon-twitter,
+.close-icon-linkedin {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.proceed-button-instagram,
+.proceed-button-facebook,
+.proceed-button-twitter,
+.proceed-button-linkedin {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+  

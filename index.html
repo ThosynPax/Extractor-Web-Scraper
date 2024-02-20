@@ -1,0 +1,257 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    
+</head>
+
+<body>
+<div class="app-container">
+  <div class="app-header">
+    <div class="app-header-left">
+      <span class="app-icon"></span>
+      <p class="app-name">Extractor</p>
+      <div class="item-status">
+        <span class="status-number">
+            <i id="popup-trigger" class="fas fa-envelope" style="color: #1f1c2e; cursor: pointer;"></i>
+            <a href="#"></a>
+        </span>
+        <span class="status-type-email">Email Extractor</span>
+    </div>
+    
+    <div class="popup" id="popup">
+      <div class="popup-content">
+          <p>Where do you want to extract emails from</p>
+          <div class="rectangles">
+            <div class="rectangle engine">
+              <i class="fab fa-google" style="margin-right: 10px;"></i>
+              <span>Search for email <br>via search engines.</span>
+            </div>
+            <div class="popup-2" id="popup-2">
+              <div class="popup-content-2">
+                <i class="fab fa-google" style="margin-right: 10px; margin-bottom: 70px;"></i> Search by keywords.
+                <i class="fas fa-times close-icon-2" style="cursor: pointer; margin-left: 100px;"></i>
+                <form>
+                    <label for="keyword">Keyword:</label>
+                    <textarea id="keyword" name="keyword" placeholder="Enter keyword" rows="5" required></textarea>
+                    <label for="location">Location:</label>
+                    <select id="location" name="location"></select>
+                  
+                    
+                    <button id="searchButton" class="proceed-button">Proceed</button>
+                </form>
+              </div>
+            </div>
+      
+        <!-- Scan Website-->
+              <div class="rectangle website">
+                <i class="fas fa-globe" style="margin-right: 10px;"></i> 
+                <span>Scan websites for<br>email address.</span>  
+              </div>
+              <div class="popup-3" id="popup-3">
+                <div class="popup-content-3">
+                    <i class="fas fa-times close-icon-3" style="cursor: pointer;"></i>
+                    <p>Enter website link:</p>
+                    <form id="websiteForm">
+                        <input type="text" id="websiteLink" placeholder="https://example.com" required>
+                        <button class="proceed-button-3" type="button" id="proceedButton">Proceed</button>
+                    </form>
+                </div>
+            </div>
+            
+            
+
+              
+              <div class="rectangle instagram">  
+                <i class="fab fa-instagram" style="margin-right: 10px;"></i> 
+                <span>Extract emails from<br>Instagram.</span> 
+              </div>
+              <!-- Popup for Instagram -->
+              <div class="popup-instagram" id="popup-instagram">
+                <div class="popup-content-instagram">
+                    <i class="fas fa-times close-icon-instagram" style="cursor: pointer;"></i>
+                    <p>They must be logged in first.</p>
+                    <p>Enter Instagram link:</p>
+                    <form>
+                        <input type="text" id="instagram-link" placeholder="https://instagram.com/...">
+                        <button class="proceed-button-instagram">Proceed</button>
+                    </form>
+                </div>
+              </div>
+              
+              <div class="rectangle facebook">
+                <i class="fab fa-facebook" style="margin-right: 10px;"></i> 
+                <span>Extract emails from<br>Facebook.</span> 
+              </div>
+              <!-- Popup for Facebook -->
+              <div class="popup-facebook" id="popup-facebook">
+                <div class="popup-content-facebook">
+                    <i class="fas fa-times close-icon-facebook" style="cursor: pointer;"></i>
+                    <p>They must be logged in first.</p>
+                    <p>Enter Facebook link:</p>
+                    <form>
+                        <input type="text" id="facebook-link" placeholder="https://facebook.com/...">
+                        <button class="proceed-button-facebook">Proceed</button>
+                    </form>
+                </div>
+              </div>
+
+              <div class="rectangle twitter">
+                <i class="fab fa-x" style="margin-right: 10px;"></i> 
+                <span>Extract emails from<br>X (twitter).</span> 
+              </div>
+              <!-- Popup for Twitter (X) -->
+            <div class="popup-twitter" id="popup-twitter">
+              <div class="popup-content-twitter">
+                  <i class="fas fa-times close-icon-twitter" style="cursor: pointer;"></i>
+                  <p>They must be logged in first.</p>
+                  <p>Enter Twitter link:</p>
+                  <form>
+                      <input type="text" id="twitter-link" placeholder="https://twitter.com/...">
+                      <button class="proceed-button-twitter">Proceed</button>
+                  </form>
+              </div>
+            </div>
+
+            <div class="rectangle linkedin">
+                <i class="fab fa-linkedin" style="margin-right: 10px;"></i> 
+                <span>Extract emails from<br>Linkedin.</span> 
+            </div>
+            <!-- Popup for LinkedIn -->
+            <div class="popup-linkedin" id="popup-linkedin">
+              <div class="popup-content-linkedin">
+                  <i class="fas fa-times close-icon-linkedin" style="cursor: pointer;"></i>
+                  <p>They must be logged in first.</p>
+                  <p>Enter LinkedIn link:</p>
+                  <form>
+                      <input type="text" id="linkedin-link" placeholder="https://linkedin.com/...">
+                      <button class="proceed-button-linkedin">Proceed</button>
+                  </form>
+              </div>
+            </div>
+          </div><br>
+          <button id="close-button">Close</button>
+      </div>
+  </div>
+  
+  
+    
+    
+  
+   <!-- First Menu-->
+
+      <div id="email-verifier" class="item-status">
+        <span class="status-number">
+            <i class="fas fa-lock" style="color: #1f1c2e;"></i>
+            <a href="#"></a>
+        </span>
+        <span class="status-type-email">Email Verifier</span>
+      </div>
+
+
+      <!-- Second Menu-->
+      <div id="open-file" class="item-status">
+        <span class="status-number" >
+          <i class="fas fa-file" style="color: black;">
+            <a href="#"></a>
+          </i>
+        </span>
+        <span class="status-type-email">Open</span>
+      </div>
+
+      <div id="refresh" class="item-status">
+        <span class="status-number" >
+          <i class="fas fa-circle" style="color: black;">
+            <a href="#"></a>
+          </i>
+        </span>
+        <span class="status-type-email">Refresh</span>
+      </div>
+  
+      <div id="save" class="item-status">
+        <span class="status-number">
+          <i class="fas fa-save" style="color: blue;"></i>
+          <a href="#"></a>
+        </span>
+        <span class="status-type-email">Save</span>
+      </div>
+    
+    </div>
+
+   
+
+   
+    
+    <div class="app-header-right">
+      <div class="item-status">
+        <span class="status-number">
+            <i class="fas fa-info" style="color: #1f1c2e;"></i>
+            <a href="#"></a>
+        </span>
+        <span class="status-type-email">Tutorials</span>
+      </div>
+      
+
+    </div>
+  </div>
+  <div class="app-content">
+    <div class="app-sidebar">
+    </div>
+    <div class="projects-section">
+
+      <div class="projects-section-line">
+        <div class="projects-status">
+          
+        </div>
+        <div class="view-actions">
+          <div class="item-status" id="play-button">
+            <span class="status-number">
+              <i class="fas fa-play" style="color: green;"></i>
+              <a href="#"></a>
+            </span>
+            <span class="status-type-email">Play</span>
+          </div>
+          <div class="item-status" id="stop-button">
+            <span class="status-number">
+              <i class="fas fa-stop" style="color: red;"></i>
+              <a href="#"></a>
+            </span>
+            <span class="status-type-email">Stop</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-boxes jsGridView">
+        <div class="project-box-wrapper">
+            <table id="emailTable" class="excel-like-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email Address</th>
+                        <th>Source</th>
+                        <th>Keyword</th>
+                        <th>Title</th>
+                        <th>Domain</th>
+                        <th>Meta Description</th>
+                        <th> - </th>
+                        <th> - </th>
+
+                    </tr>
+                </thead>
+                <tbody id="scraping-results">
+                    <!-- The table is initially empty, and CSS will create the gridlines. -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+</div>
+
+</body>
+
+<script src="js/renderer.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="js/extractor.js"></script>
+<script src="assets/js/country.js"></script>
+</html>
